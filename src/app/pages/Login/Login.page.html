@@ -1,0 +1,12 @@
+<div class="content">
+  <form class="form-signin" (ngSubmit)="onSubmit()">
+    <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+    <input type="text" name="email" placeholder="E-mail" [(ngModel)]="user.email" class="form-control" required
+      autofocus />
+    <input type="password" name="password" placeholder="Senha" [(ngModel)]="user.password" class="form-control"
+      required />
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+  </form>
+</div>
+
+<load-component *ngIf="loading"></load-component>

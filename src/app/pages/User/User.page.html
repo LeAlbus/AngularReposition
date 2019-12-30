@@ -1,0 +1,21 @@
+<header-component></header-component>
+
+<div class="form-register container">
+  <form (ngSubmit)="onSubmit()">
+    <h1 class="h3 mb-3 font-weight-normal">{{ title }}</h1>
+
+    <input type="text" name="name" placeholder="Nome" [(ngModel)]="user.name" class="form-control" required autofocus />
+    <input type="text" name="email" placeholder="E-mail" [(ngModel)]="user.email" class="form-control" required />
+    <input type="text" name="cpf" placeholder="CPF" [(ngModel)]="user.cpf" class="form-control" />
+    <input type="text" name="cep" placeholder="CEP" [(ngModel)]="user.cep" class="form-control" />
+    <input type="text" name="address" placeholder="Rua" [(ngModel)]="user.address" class="form-control" />
+    <input type="text" name="number" placeholder="Número" [(ngModel)]="user.number" class="form-control" />
+    <input type="text" name="complement" placeholder="Complemento" [(ngModel)]="user.complement" class="form-control" />
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Salvar</button>
+
+  </form>
+
+</div>
+
+<load-component *ngIf="loading"></load-component>
